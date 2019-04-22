@@ -28,6 +28,11 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     ui->tableWidget->setRowCount(0);
+    table.Registre.clear();
+    table.Delete.clear();
+    ui->tableWidget_2->setRowCount(0);
+    table.i=0;
+    table.Lecture();
     for(auto it=table.Registre.begin();it!=table.Registre.end();it++){
         ui->tableWidget->insertRow(ui->tableWidget->rowCount());
         int fila = ui->tableWidget->rowCount()-1;
